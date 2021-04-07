@@ -8,12 +8,12 @@
 
 @mytag
 Scenario: Update my information
-    And I enter <input> data to all fields
+    And I enter data to all fields
     When I click on Save button
     Then The profile should be saved successfully
 
  
     Scenario: Change Password
-    And I enter <input> data to the password fields
+    And I enter data to the password fields
     When I click on Save button
     Then The password should be changed successfully

@@ -27,6 +27,11 @@ namespace Westpac_Assessment.Helpers
             driver.Manage().Window.Maximize();
         }
 
+        public static void CloseBrowser()
+        {
+            driver.Close();
+        }
+
         #region Excel 
         public class ExcelLib
         {

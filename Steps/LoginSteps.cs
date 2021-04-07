@@ -2,6 +2,7 @@
 using TechTalk.SpecFlow;
 using Westpac_Assessment.Base;
 using Westpac_Assessment.Pages;
+using Westpac_Assessment.Helpers;
 
 namespace Westpac_Assessment.Steps
 {
@@ -21,10 +22,11 @@ namespace Westpac_Assessment.Steps
             Login(data);
         }
         
-        [Then(@"I validate successfull login to the application as per the ""(.*)""")]
+        [Then(@"I validate successfull login to the application as per the (.*)")]
         public void ThenIValidateSuccessfullLoginToTheApplicationAsPerThe(string data)
         {
             Assertion(data);
+           Drivers. CloseBrowser();
         }
     }
 }

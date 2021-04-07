@@ -70,3 +70,4 @@ C:\Users\Maria.Sagayaraj\Desktop\Westpac_Assessment\obj\Debug\net472\Westpac_Ass
 C:\Users\Maria.Sagayaraj\Desktop\Westpac_Assessment\obj\Debug\net472\Westpac_Assessment.csproj.CopyComplete
 C:\Users\Maria.Sagayaraj\Desktop\Westpac_Assessment\obj\Debug\net472\Westpac_Assessment.dll
 C:\Users\Maria.Sagayaraj\Desktop\Westpac_Assessment\obj\Debug\net472\Westpac_Assessment.pdb
+C:\Users\Maria.Sagayaraj\Desktop\Westpac_Assessment\bin\Debug\net472\WebDriver.Support.dll

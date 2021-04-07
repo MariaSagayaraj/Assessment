@@ -6,51 +6,44 @@ using Westpac_Assessment.Pages;
 namespace Westpac_Assessment.Steps
 {
     [Binding]
-    public class UpdateProfileSteps
+    public class UpdateProfileSteps : Page_Profile
     {
-        [Given(@"I login to the application using ""(.*)"" credentials")]
+        [Given(@"I login to the application using (.*) credentials")]
         public void GivenILoginToTheApplicationUsingCredentials(string valid)
         {
             BaseClass init = new BaseClass();
             init.Initialize();
             Page_Login login = new Page_Login();
-            login.Login(valid);
+            login.Login("valid");
         }
 
-        [Given(@"I click on Profile menu")]
-        public void GivenIClickOnProfileMenu()
+        [Given(@"I enter data to all fields")]
+        public void GivenIEnterDataToAllFields()
         {
-            ScenarioContext.Current.Pending();
+            UpdateProfile();
         }
-        
-        [Given(@"I enter (.*) data to all fields")]
-        public void GivenIEnterDataToAllFields(string p0)
+        [Given(@"I enter data to the password fields")]
+        public void GivenIEnterDataToThePasswordFields()
         {
-            ScenarioContext.Current.Pending();
+            ChangePassword();
         }
-        
-        [Given(@"I enter (.*) data to the password fields")]
-        public void GivenIEnterDataToThePasswordFields(string p0)
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
+
         [When(@"I click on Save button")]
         public void WhenIClickOnSaveButton()
         {
-            ScenarioContext.Current.Pending();
+            SaveButton.Click();
         }
         
         [Then(@"The profile should be saved successfully")]
         public void ThenTheProfileShouldBeSavedSuccessfully()
         {
-            ScenarioContext.Current.Pending();
+            AssertUpdate();
         }
-        
+
         [Then(@"The password should be changed successfully")]
         public void ThenThePasswordShouldBeChangedSuccessfully()
         {
-            ScenarioContext.Current.Pending();
+            AssertUpdate();
         }
     }
 }
