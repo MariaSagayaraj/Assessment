@@ -37,7 +37,7 @@ namespace Westpac_Assessment.Helpers
             }
             catch (Exception ex)
             {
-                Assert.Fail("Excetion at waitClickableElement", ex.Message);
+                Assert.Fail("Exception at waitClickableElement", ex.Message);
             }
 
         }

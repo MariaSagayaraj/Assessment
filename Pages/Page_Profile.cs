@@ -21,13 +21,13 @@ namespace Westpac_Assessment.Pages
 
         #region Initialize Web Elements 
 
-        public IWebElement ProfileButton => Drivers.driver.FindElement(By.XPath("//*[contains(@class,'nav-link')][@xpath='2']"));
+        public IWebElement ProfileButton => Drivers.driver.FindElement(By.XPath("//a[contains(text(),'Profile')]"));
 
         public IWebElement UpdateFirstName => Drivers.driver.FindElement(By.XPath("//input[@id='firstName']"));
 
         public IWebElement UpdateLastName => Drivers.driver.FindElement(By.XPath("//input[@id='lastName']"));
 
-        public IWebElement Genderbox => Drivers.driver.FindElement(By.XPath(""));
+        //public IWebElement Genderbox => Drivers.driver.FindElement(By.XPath(""));
 
         public IWebElement AgeBox => Drivers.driver.FindElement(By.XPath("//input[@id='age']"));
 
@@ -50,8 +50,8 @@ namespace Westpac_Assessment.Pages
         public void selectGender()
         {
             
-            SelectElement element = new SelectElement(Genderbox);
-            element.SelectByText("Female");
+            //SelectElement element = new SelectElement(Genderbox);
+            //element.SelectByText("Female");
          }
 
         public void selectHobby()
@@ -60,16 +60,15 @@ namespace Westpac_Assessment.Pages
             element.SelectByText("Reading");
         }
        
-        #endregion
 
         public void UpdateProfile()
         {
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
             ProfileButton.Click();
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
             UpdateFirstName.SendKeys(Drivers.ExcelLib.ReadData(2, "Update FirstName"));
             UpdateLastName.SendKeys(Drivers.ExcelLib.ReadData(2, "Update LastName"));
-            selectGender();
+            //selectGender();
             AgeBox.SendKeys(Drivers.ExcelLib.ReadData(2, "Age"));
             AddressBox.SendKeys(Drivers.ExcelLib.ReadData(2, "Address"));
             PhoneBox.SendKeys(Drivers.ExcelLib.ReadData(2, "Phone"));
@@ -77,7 +76,7 @@ namespace Westpac_Assessment.Pages
 
         public void ChangePassword()
         {
-            //Thread.Sleep(1000);
+            Thread.Sleep(1000);
             ProfileButton.Click();
             Thread.Sleep(1000);
             CurrentPasswordbox.SendKeys(Drivers.ExcelLib.ReadData(2, "Password"));
@@ -88,7 +87,7 @@ namespace Westpac_Assessment.Pages
         public void AssertUpdate()
         {
             Thread.Sleep(1000);
-            Assert.IsTrue(Drivers.driver.PageSource.Contains("The Profile has been saved successful"));
+            Assert.IsTrue(Drivers.driver.PageSource.Contains("The profile has been saved successful"));
            
         }
     }
