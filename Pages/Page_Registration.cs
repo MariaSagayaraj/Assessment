@@ -1,8 +1,10 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Westpac_Assessment.Base;
 using Westpac_Assessment.Helpers;
@@ -44,8 +46,12 @@ namespace Westpac_Assessment.Pages
 
             txtConfirmPassword.SendKeys(Drivers.ExcelLib.ReadData(2, "Confirm Password"));
 
-            
+        }
 
+        public void RegAssertion()
+        {
+            Thread.Sleep(1000);
+            Assert.AreEqual(Drivers.driver.FindElement(By.XPath("//div[contains(text(),'Registration is successful')]")).Displayed, true);
         }
     }
 }

@@ -40,7 +40,8 @@ namespace Westpac_Assessment.Steps
         [Then(@"I should be registered successfully")]
         public void ThenIShouldBeRegisteredSuccessfully()
         {
-            Drivers.driver.Close();
+            RegAssertion();
+            Drivers.CloseBrowser();
         }
     }
 }
