@@ -19,7 +19,7 @@ namespace Westpac_Assessment.Pages
         public IWebElement ProfileButton => Drivers.driver.FindElement(By.XPath("//a[contains(text(),'Profile')]"));
         public IWebElement UpdateFirstName => Drivers.driver.FindElement(By.XPath("//input[@id='firstName']"));
         public IWebElement UpdateLastName => Drivers.driver.FindElement(By.XPath("//input[@id='lastName']"));
-        //public IWebElement Genderbox => Drivers.driver.FindElement(By.XPath(""));
+        public IWebElement Genderbox => Drivers.driver.FindElement(By.XPath("//input[@id='gender']"));
         public IWebElement AgeBox => Drivers.driver.FindElement(By.XPath("//input[@id='age']"));
         public IWebElement AddressBox => Drivers.driver.FindElement(By.XPath("//textarea[@id='address']"));
         public IWebElement PhoneBox => Drivers.driver.FindElement(By.XPath("//input[@id='phone']"));
@@ -33,29 +33,47 @@ namespace Westpac_Assessment.Pages
 
         public void selectGender()
         {
-            
-            //SelectElement element = new SelectElement(Genderbox);
-            //element.SelectByText("Female");
-         }
+            Genderbox.Clear();
+            Genderbox.SendKeys(Drivers.ExcelLib.ReadData(2, "Gender"));
+        }
 
         public void selectHobby()
         {
-            SelectElement element = new SelectElement(Hobbybox);
-            element.SelectByText("Reading");
+            new SelectElement(Hobbybox).SelectByText(Drivers.ExcelLib.ReadData(2, "Hobby"));
         }
-       
 
         public void UpdateProfile()
         {
+            //Click on Profile button
             Thread.Sleep(2000);
             ProfileButton.Click();
             Thread.Sleep(2000);
+
+            //Update FirstName
+            UpdateFirstName.Clear();
             UpdateFirstName.SendKeys(Drivers.ExcelLib.ReadData(2, "Update FirstName"));
+
+            //Update Last Name
+            UpdateLastName.Clear();
             UpdateLastName.SendKeys(Drivers.ExcelLib.ReadData(2, "Update LastName"));
-            //selectGender();
+
+            //Select gender from dropdown
+            selectGender();
+
+            //Enter age into the age field
+            AgeBox.Clear();
             AgeBox.SendKeys(Drivers.ExcelLib.ReadData(2, "Age"));
+
+            //Enter Address detail into the address field
+            AddressBox.Clear();
             AddressBox.SendKeys(Drivers.ExcelLib.ReadData(2, "Address"));
+
+            //Enter Phone number into the phone field
+            PhoneBox.Clear();
             PhoneBox.SendKeys(Drivers.ExcelLib.ReadData(2, "Phone"));
+
+            //Select hobby from the dropdown
+            selectHobby();
         }
 
         public void ChangePassword()

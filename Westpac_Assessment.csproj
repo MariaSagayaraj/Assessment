@@ -31,10 +31,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Hooks\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="Config\BuggyResources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
