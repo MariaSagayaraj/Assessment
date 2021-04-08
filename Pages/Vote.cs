@@ -51,23 +51,23 @@ namespace Westpac_Assessment.Pages
             }
         }*/
 
-       /* public void Model()
-        {
-            Thread.Sleep(1000);
-            Model1.Click();
-        }*/
 
+        // Overall rating method
         public void OverallModel()
         {
             Thread.Sleep(1000);
+
+            // Actions method to move between pages
             Actions act = new Actions(Drivers.driver);
             act.MoveToElement(Drivers.driver.FindElement(By.XPath("//a[contains(text(),'»')]"))).Click().Build().Perform();
             Thread.Sleep(1000);
+
             OverallModel1.Click();
             Thread.Sleep(1000);
             OverallModel2.Click();
         }
 
+        // Add Comment and Click Vote
         public void AddCommentAndVote()
         {
             Thread.Sleep(1000);
@@ -75,6 +75,7 @@ namespace Westpac_Assessment.Pages
             VoteButton.Click();
         }
 
+        // Voting Assertion
         public void AssertVote()
         {
             Thread.Sleep(1000);

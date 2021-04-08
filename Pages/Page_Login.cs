@@ -10,13 +10,14 @@ namespace Westpac_Assessment.Pages
 {
     public class Page_Login
     {
+        public static String username;
+        public static String password;
+
+        // Excel Initialization
         public Page_Login()
         {
             Drivers.ExcelLib.PopulateInCollection(BaseClass.ExcelPath, "Registration");
         }
-
-        public static String username;
-        public static String password;
 
         #region Initialize Web Elements 
         public IWebElement enterUname => Drivers.driver.FindElement(By.XPath("//input[@name='login']"));
@@ -25,7 +26,11 @@ namespace Westpac_Assessment.Pages
 
         public IWebElement LoginButton => Drivers.driver.FindElement(By.XPath("//button[@class='btn btn-success']"));
 
+        public IWebElement LogoutButton => Drivers.driver.FindElement(By.XPath("//a[contains(text(),'Logout')]"));
+
         #endregion
+
+        // Login method
         public void Login(String data)
         {
             switch (data)
@@ -49,7 +54,7 @@ namespace Westpac_Assessment.Pages
             LoginButton.Click();
         }
 
-        //Assertions
+        // Login Assertion
         public void Assertion(String data)
         {
             switch (data)
@@ -70,7 +75,14 @@ namespace Westpac_Assessment.Pages
                     break;
             }
         }
+
+        // Logout Assertion
+        public void LogOutAssertion()
+        {
+            Thread.Sleep(1000);
+            Assert.AreEqual(LoginButton.Displayed, true);
+        }
     }
- }
+}
 
             

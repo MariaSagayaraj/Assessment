@@ -9,6 +9,7 @@ namespace Westpac_Assessment.Pages
 {
     public class Page_Profile
     {
+        // Excel Initialization
         public Page_Profile()
         {
             Drivers.ExcelLib.PopulateInCollection(BaseClass.ExcelPath, "Registration");
@@ -17,31 +18,34 @@ namespace Westpac_Assessment.Pages
         #region Initialize Web Elements 
 
         public IWebElement ProfileButton => Drivers.driver.FindElement(By.XPath("//a[contains(text(),'Profile')]"));
-        public IWebElement UpdateFirstName => Drivers.driver.FindElement(By.XPath("//input[@id='firstName']"));
-        public IWebElement UpdateLastName => Drivers.driver.FindElement(By.XPath("//input[@id='lastName']"));
-        public IWebElement Genderbox => Drivers.driver.FindElement(By.XPath("//input[@id='gender']"));
-        public IWebElement AgeBox => Drivers.driver.FindElement(By.XPath("//input[@id='age']"));
-        public IWebElement AddressBox => Drivers.driver.FindElement(By.XPath("//textarea[@id='address']"));
-        public IWebElement PhoneBox => Drivers.driver.FindElement(By.XPath("//input[@id='phone']"));
-        public IWebElement Hobbybox => Drivers.driver.FindElement(By.XPath("//select[@id='hobby']"));
-        public IWebElement CurrentPasswordbox => Drivers.driver.FindElement(By.XPath("//input[@id='currentPassword']"));
-        public IWebElement NewPasswordbox => Drivers.driver.FindElement(By.XPath("//input[@id='newPassword']"));
-        public IWebElement ConfirmPasswordbox => Drivers.driver.FindElement(By.XPath("//input[@id='newPasswordConfirmation']"));
+        public IWebElement FirstNameTextbox => Drivers.driver.FindElement(By.XPath("//input[@id='firstName']"));
+        public IWebElement LastNameTextBox => Drivers.driver.FindElement(By.XPath("//input[@id='lastName']"));
+        public IWebElement GenderTextbox => Drivers.driver.FindElement(By.XPath("//input[@id='gender']"));
+        public IWebElement AgeTextBox => Drivers.driver.FindElement(By.XPath("//input[@id='age']"));
+        public IWebElement AddressTextBox => Drivers.driver.FindElement(By.XPath("//textarea[@id='address']"));
+        public IWebElement PhonetextBox => Drivers.driver.FindElement(By.XPath("//input[@id='phone']"));
+        public IWebElement HobbyTextbox => Drivers.driver.FindElement(By.XPath("//select[@id='hobby']"));
+        public IWebElement CurrentPassword => Drivers.driver.FindElement(By.XPath("//input[@id='currentPassword']"));
+        public IWebElement NewPassword => Drivers.driver.FindElement(By.XPath("//input[@id='newPassword']"));
+        public IWebElement ConfirmPassword => Drivers.driver.FindElement(By.XPath("//input[@id='newPasswordConfirmation']"));
         public IWebElement SaveButton => Drivers.driver.FindElement(By.XPath("//button[contains(text(),'Save')]"));
 
         #endregion
 
+        // Select Gender
         public void selectGender()
         {
-            Genderbox.Clear();
-            Genderbox.SendKeys(Drivers.ExcelLib.ReadData(2, "Gender"));
+            GenderTextbox.Clear();
+            GenderTextbox.SendKeys(Drivers.ExcelLib.ReadData(2, "Gender"));
         }
 
+        // Select Hobby 
         public void selectHobby()
         {
-            new SelectElement(Hobbybox).SelectByText(Drivers.ExcelLib.ReadData(2, "Hobby"));
+            new SelectElement(HobbyTextbox).SelectByText(Drivers.ExcelLib.ReadData(2, "Hobby"));
         }
 
+        // Update profile method
         public void UpdateProfile()
         {
             //Click on Profile button
@@ -50,47 +54,54 @@ namespace Westpac_Assessment.Pages
             Thread.Sleep(2000);
 
             //Update FirstName
-            UpdateFirstName.Clear();
-            UpdateFirstName.SendKeys(Drivers.ExcelLib.ReadData(2, "Update FirstName"));
+            FirstNameTextbox.Clear();
+            FirstNameTextbox.SendKeys(Drivers.ExcelLib.ReadData(2, "Update FirstName"));
 
             //Update Last Name
-            UpdateLastName.Clear();
-            UpdateLastName.SendKeys(Drivers.ExcelLib.ReadData(2, "Update LastName"));
+            LastNameTextBox.Clear();
+            LastNameTextBox.SendKeys(Drivers.ExcelLib.ReadData(2, "Update LastName"));
 
             //Select gender from dropdown
             selectGender();
 
             //Enter age into the age field
-            AgeBox.Clear();
-            AgeBox.SendKeys(Drivers.ExcelLib.ReadData(2, "Age"));
+            AgeTextBox.Clear();
+            AgeTextBox.SendKeys(Drivers.ExcelLib.ReadData(2, "Age"));
 
             //Enter Address detail into the address field
-            AddressBox.Clear();
-            AddressBox.SendKeys(Drivers.ExcelLib.ReadData(2, "Address"));
+            AddressTextBox.Clear();
+            AddressTextBox.SendKeys(Drivers.ExcelLib.ReadData(2, "Address"));
 
             //Enter Phone number into the phone field
-            PhoneBox.Clear();
-            PhoneBox.SendKeys(Drivers.ExcelLib.ReadData(2, "Phone"));
+            PhonetextBox.Clear();
+            PhonetextBox.SendKeys(Drivers.ExcelLib.ReadData(2, "Phone"));
 
             //Select hobby from the dropdown
             selectHobby();
         }
 
+        // Update Password
         public void ChangePassword()
         {
             Thread.Sleep(1000);
             ProfileButton.Click();
             Thread.Sleep(1000);
-            CurrentPasswordbox.SendKeys(Drivers.ExcelLib.ReadData(2, "Password"));
-            NewPasswordbox.SendKeys(Drivers.ExcelLib.ReadData(2, "New Password"));
-            ConfirmPasswordbox.SendKeys(Drivers.ExcelLib.ReadData(2, "New Password"));
+
+            // Entering current password
+            CurrentPassword.SendKeys(Drivers.ExcelLib.ReadData(2, "Password"));
+
+            // Entering New password
+            NewPassword.SendKeys(Drivers.ExcelLib.ReadData(2, "New Password"));
+
+            // Entering Confirm password
+            ConfirmPassword.SendKeys(Drivers.ExcelLib.ReadData(2, "New Password"));
         }
 
+        // Update Assertion
         public void AssertUpdate()
         {
             Thread.Sleep(1000);
-            Assert.IsTrue(Drivers.driver.PageSource.Contains("The profile has been saved successful"));
-           
+            Assert.IsTrue(Drivers.driver.PageSource.Contains("The profile has been saved successful"));           
         }
     }
 }

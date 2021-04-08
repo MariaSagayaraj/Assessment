@@ -12,3 +12,14 @@
       | valid |
       | invalid |
       | null |
+
+    @automation
+   Scenario Outline: Logging out
+    Given   I open browser and navigate to the url
+    When   I enter <data> login credentials and click login button
+    And       I click on Logout button
+    Then   I should be successfully logged out from the application
+
+    Examples:
+      | data  |
+      | valid |

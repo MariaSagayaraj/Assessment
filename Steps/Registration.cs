@@ -20,19 +20,19 @@ namespace Westpac_Assessment.Steps
         [Given(@"I click on Register button")]
         public void GivenIClickOnRegisterButton()
         {
-            btnRegister.Click();
+            RegButton.Click();
         }
-        
+
         [Given(@"I enter data to the fields")]
         public void GivenIEnterDataToTheFields()
         {
             Register();
         }
-        
+
         [When(@"I click on Register button")]
         public void WhenIClickOnRegisterButton()
         {
-           buttonRegister.Click();
+            RegisterButton.Click();
         }
         
         [Then(@"I should be registered successfully")]

@@ -14,19 +14,19 @@ namespace Westpac_Assessment.Helpers
 {
      class Drivers
     {
-        //Initialize the browser
+        // Initialize the browser
         public static IWebDriver driver { get; set; }
 
         public static void InitializeBrowser()
         {
-            //Defining the browser
+          // Defining the browser
             driver = new ChromeDriver();
             
-
-            //Maximise the window
+            // Maximise the window
             driver.Manage().Window.Maximize();
         }
 
+        // Closing Browser
         public static void CloseBrowser()
         {
             driver.Close();

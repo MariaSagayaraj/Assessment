@@ -12,12 +12,15 @@ namespace Westpac_Assessment.Base
 {
     public class BaseClass
     {
-        //public static int Browser = Int32.Parse(BuggyResources.Browser);
+
+        // Initializing Path variables
+
         public static string path = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\.."));
         public static string Screenshot = path + "\\" + BuggyResources.ScreenShot;
         public static string ExcelPath = path + "\\" + BuggyResources.Excel;
         public string BaseUrl = "https://buggy.justtestit.org/";
 
+        //Browser Initialization
         public void Initialize()
         {
             //initialize browser

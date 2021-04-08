@@ -14,8 +14,8 @@ namespace Westpac_Assessment.Helpers
     {
 
         #region waitClickableElement
-        // generic method that allows driver to wait until element is clickable
-        public static void waitClickableElement(IWebDriver driver, string locator, string locatorValue)
+        // generic method that allows driver to wait until element is clickable - Explicit Wait
+        public static void WaitClickableElement(IWebDriver driver, string locator, string locatorValue)
         {
             try
             {

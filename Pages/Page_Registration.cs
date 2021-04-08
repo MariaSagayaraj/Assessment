@@ -13,41 +13,44 @@ namespace Westpac_Assessment.Pages
 {
     public class Page_Registration
     {
+        // Excel Initialization
         public Page_Registration()
         {
             Drivers.ExcelLib.PopulateInCollection(BaseClass.ExcelPath, "Registration");
         }
 
         #region Initialize Web Elements 
-        public IWebElement btnRegister => Drivers.driver.FindElement(By.XPath("//a[contains(text(),'Register')]"));
+        public IWebElement RegButton => Drivers.driver.FindElement(By.XPath("//a[contains(text(),'Register')]"));
+        public IWebElement LoginTextbox => Drivers.driver.FindElement(By.XPath("//input[@id='username']"));
+        public IWebElement FTextbox => Drivers.driver.FindElement(By.XPath("//input[@id='firstName']"));
+        public IWebElement LTextbox => Drivers.driver.FindElement(By.XPath("//input[@id='lastName']"));
+        public IWebElement PwdTextBox => Drivers.driver.FindElement(By.XPath("//input[@id='password']"));
+        public IWebElement ConfirmPwdTextbox => Drivers.driver.FindElement(By.XPath("//input[@id='confirmPassword']"));
 
-        public IWebElement txtLogin => Drivers.driver.FindElement(By.XPath("//input[@id='username']"));
-
-        public IWebElement txtFirstName => Drivers.driver.FindElement(By.XPath("//input[@id='firstName']"));
-
-        public IWebElement txtLastName => Drivers.driver.FindElement(By.XPath("//input[@id='lastName']"));
-
-        public IWebElement txtPassword => Drivers.driver.FindElement(By.XPath("//input[@id='password']"));
-
-        public IWebElement txtConfirmPassword => Drivers.driver.FindElement(By.XPath("//input[@id='confirmPassword']"));
-
-        public IWebElement buttonRegister => Drivers.driver.FindElement(By.XPath("//button[contains(text(),'Register')]"));
+        public IWebElement RegisterButton => Drivers.driver.FindElement(By.XPath("//button[contains(text(),'Register')]"));
         #endregion
 
+        // Registration method
         public void Register()
         {
-            txtLogin.SendKeys(Drivers.ExcelLib.ReadData(2, "Login"));
+            // Enter login details
+            LoginTextbox.SendKeys(Drivers.ExcelLib.ReadData(2, "Login"));
 
-            txtFirstName.SendKeys(Drivers.ExcelLib.ReadData(2, "First Name"));
+            // Enter First Name
+            FTextbox.SendKeys(Drivers.ExcelLib.ReadData(2, "First Name"));
 
-            txtLastName.SendKeys(Drivers.ExcelLib.ReadData(2, "Last Name"));
+            // Enter Last Name
+            LTextbox.SendKeys(Drivers.ExcelLib.ReadData(2, "Last Name"));
 
-            txtPassword.SendKeys(Drivers.ExcelLib.ReadData(2, "Password"));
+            // Enter Password
+            PwdTextBox.SendKeys(Drivers.ExcelLib.ReadData(2, "Password"));
 
-            txtConfirmPassword.SendKeys(Drivers.ExcelLib.ReadData(2, "Confirm Password"));
+            // Enter Confirm Password
+            ConfirmPwdTextbox.SendKeys(Drivers.ExcelLib.ReadData(2, "Confirm Password"));
 
         }
 
+        // Regsitration Assertion method
         public void RegAssertion()
         {
             Thread.Sleep(1000);

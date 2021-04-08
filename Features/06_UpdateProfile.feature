@@ -1,6 +1,5 @@
 ﻿Feature: 06_UpdateProfile
-    As a User,
-    I need to update my profile details
+    As a User, I need to update my profile details
 
     Background: 
     Given I login to the application using "valid" credentials
