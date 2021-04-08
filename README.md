@@ -62,8 +62,18 @@ Microsoft Excel - Data-Driven approach
 :heavy_check_mark: All the test result information can be viewed on the HTML file
 
 
+### Steps to change the test data:
+
+:heavy_check_mark: Navigate to the download Westpac Assessment folder
+
+:heavy_check_mark: Open the Data.xlsx file from the Excel folder
+
+:heavy_check_mark: Change the desired input field values
 
 
+### Bug Report:
+
+Please navigate to BugReport folder in the project repository and open BugReport_BuggyCarsRating.xlsx file
 
 
 
