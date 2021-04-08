@@ -2,6 +2,7 @@
 using System.Threading;
 using TechTalk.SpecFlow;
 using Westpac_Assessment.Base;
+using Westpac_Assessment.Helpers;
 using Westpac_Assessment.Pages;
 
 namespace Westpac_Assessment.Steps
@@ -22,7 +23,7 @@ namespace Westpac_Assessment.Steps
         public void GivenIClickOnTheOverallRatingCategory()
         {
             Thread.Sleep(1000);
-            Category("Category3");
+            Category3.Click();
         }
 
         [Given(@"I select the car to vote")]
@@ -42,6 +43,7 @@ namespace Westpac_Assessment.Steps
         public void ThenIShouldBeAbleToSeeTheSuccessfulVoteMessageAdded()
         {
             AssertVote();
+            Drivers.CloseBrowser();
         }
     }
 }

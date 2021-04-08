@@ -23,13 +23,14 @@ namespace Westpac_Assessment.Steps
         public void GivenIClickOnThePopularMakeCategory()
         {
             Thread.Sleep(1000);
-            Category("Category1");
+            Category1.Click();
         }
         
         [Given(@"I click on the desired car model")]
         public void GivenIClickOnTheDesiredCarModel()
         {
-            Model();
+            Thread.Sleep(1000);
+            Model1.Click();
         }
         
         [When(@"I add comment and vote")]

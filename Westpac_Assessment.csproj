@@ -40,7 +40,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>BuggyResources.resx</DependentUpon>
     </Compile>
-    <Compile Update="Features\Registration.feature.cs">
+    <Compile Update="Features\01_Registration.feature.cs">
       <DesignTime>True</DesignTime>
     </Compile>
   </ItemGroup>
@@ -53,9 +53,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <SpecFlowFeatureFiles Update="Features\Registration.feature">
+    <SpecFlowFeatureFiles Update="Features\01_Registration.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Registration.feature.cs</LastGenOutput>
+      <LastGenOutput>01_Registration.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>
   </ItemGroup>
 

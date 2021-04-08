@@ -20,23 +20,23 @@ namespace Westpac_Assessment.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.7.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Vote through Popular Model")]
-    public partial class VoteThroughPopularModelFeature
+    [NUnit.Framework.DescriptionAttribute("03_Vote through Popular Make")]
+    public partial class _03_VoteThroughPopularMakeFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "VoteThroughPopularModel.feature"
+#line 1 "03_VoteThroughPopularMake.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Vote through Popular Model", "  As a Tester, I wanted to test the if the user is able to vote through Popular M" +
-                    "odel", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "03_Vote through Popular Make", "  As a Tester, I wanted to test the if the user is able to vote through Popular M" +
+                    "ake", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -75,14 +75,14 @@ namespace Westpac_Assessment.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Vote through Popular Model")]
+        [NUnit.Framework.DescriptionAttribute("Vote through Popular Make")]
         [NUnit.Framework.CategoryAttribute("automation")]
-        public virtual void VoteThroughPopularModel()
+        public virtual void VoteThroughPopularMake()
         {
             string[] tagsOfScenario = new string[] {
                     "automation"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Vote through Popular Model", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Vote through Popular Make", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 5
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -104,16 +104,19 @@ namespace Westpac_Assessment.Features
             {
                 this.ScenarioStart();
 #line 6
-   testRunner.Given("I login to the application with \"valid\" input", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I login to the application with \"valid\" inputs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 7
-    testRunner.And("I click on the Popular Model category", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I click on the Popular Make category", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 8
-    testRunner.When("I add a comment and vote", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.And("I click on the desired car model", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 9
-    testRunner.Then("I should be able to see the successful vote message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.When("I add comment and vote", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 10
+    testRunner.Then("I should be able to see the vote has been added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

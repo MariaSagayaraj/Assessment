@@ -1,4 +1,4 @@
-﻿Feature: Vote through Popular Make
+﻿Feature: 03_Vote through Popular Make
   As a Tester, I wanted to test the if the user is able to vote through Popular Make
 
   @automation

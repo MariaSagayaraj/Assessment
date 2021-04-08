@@ -15,14 +15,12 @@ namespace Westpac_Assessment.Steps
         {
             BaseClass init = new BaseClass();
             init.Initialize();
-           
         }
         
         [Given(@"I click on Register button")]
         public void GivenIClickOnRegisterButton()
         {
             btnRegister.Click();
-            
         }
         
         [Given(@"I enter data to the fields")]

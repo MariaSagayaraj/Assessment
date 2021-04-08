@@ -20,7 +20,7 @@ namespace Westpac_Assessment.Pages
 
         public IWebElement Category3 => Drivers.driver.FindElement(By.XPath("//img[@src='/img/overall.jpg']"));
 
-        public IWebElement Model1 => Drivers.driver.FindElement(By.XPath("//img[@title='Lamborghini Murciélago']"));
+        public IWebElement Model1 => Drivers.driver.FindElement(By.LinkText("AVENTADOR"));
 
         public IWebElement OverallModel1 => Drivers.driver.FindElement(By.XPath("//a[contains(text(),'Lancia')]"));
 
@@ -31,7 +31,7 @@ namespace Westpac_Assessment.Pages
         public IWebElement VoteButton => Drivers.driver.FindElement(By.XPath("//button[contains(text(),'Vote!')]"));
 
         #endregion
-        public void Category(String category)
+       /* public void Category(String category)
         {
             if (category == "Category1")
             {
@@ -49,13 +49,13 @@ namespace Westpac_Assessment.Pages
             {
                 Console.WriteLine("Incorrect category supplied");
             }
-        }
+        }*/
 
-        public void Model()
+       /* public void Model()
         {
             Thread.Sleep(1000);
             Model1.Click();
-        }
+        }*/
 
         public void OverallModel()
         {

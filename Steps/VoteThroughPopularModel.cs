@@ -23,7 +23,7 @@ namespace Westpac_Assessment.Steps
         public void GivenIClickOnThePopularModelCategory()
         {
             Thread.Sleep(1000);
-            Category("Category2");
+            Category2.Click();
         }
         
         [When(@"I add a comment and vote")]

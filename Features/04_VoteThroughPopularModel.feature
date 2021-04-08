@@ -1,4 +1,4 @@
-﻿Feature: Vote through Popular Model
+﻿Feature: 04_Vote through Popular Model
   As a Tester, I wanted to test the if the user is able to vote through Popular Model
 
   @automation

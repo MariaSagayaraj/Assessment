@@ -1,4 +1,4 @@
-﻿Feature: Login
+﻿Feature: 02_Login
   As a Tester, I wanted to test the login functionality of  Buggy Cars Rating application
 
   @automation

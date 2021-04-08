@@ -1,6 +1,7 @@
 ﻿using System;
 using TechTalk.SpecFlow;
 using Westpac_Assessment.Base;
+using Westpac_Assessment.Helpers;
 using Westpac_Assessment.Pages;
 
 namespace Westpac_Assessment.Steps
@@ -38,12 +39,14 @@ namespace Westpac_Assessment.Steps
         public void ThenTheProfileShouldBeSavedSuccessfully()
         {
             AssertUpdate();
+            Drivers.CloseBrowser();
         }
 
         [Then(@"The password should be changed successfully")]
         public void ThenThePasswordShouldBeChangedSuccessfully()
         {
             AssertUpdate();
+            Drivers.CloseBrowser();
         }
     }
 }

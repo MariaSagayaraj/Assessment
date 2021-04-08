@@ -1,4 +1,4 @@
-﻿Feature: Vote through Overall rating category
+﻿Feature: 05_Vote through Overall rating category
   As a Tester, I wanted to test the if the user is able to vote through overall rating
 
   @automation
