@@ -12,7 +12,11 @@ namespace Westpac_Assessment.Pages
 {
     public class Vote
     {
-        public IWebElement Category1 => Drivers.driver.FindElement(By.XPath(""));
+        public IWebElement Category1 => Drivers.driver.FindElement(By.XPath("//img[@title='Lamborghini']"));
+
+        public IWebElement Category2 => Drivers.driver.FindElement(By.XPath("//img[@title='Diablo']"));
+
+        public IWebElement Category3 => Drivers.driver.FindElement(By.XPath("//img[@src='/img/overall.jpg']"));
 
         public IWebElement Model1 => Drivers.driver.FindElement(By.XPath("//img[@title='Lamborghini Murciélago']"));
 
@@ -20,13 +24,30 @@ namespace Westpac_Assessment.Pages
 
         public IWebElement VoteButton => Drivers.driver.FindElement(By.XPath("//button[contains(text(),'Vote!')]"));
 
-        public void Category()
+        public void Category(String category)
         {
-            Category1.Click();
+            
+            if (category == "Category1")
+            {
+                Category1.Click();
+            }
+            if (category == "Category2")
+            {
+                Category2.Click();
+            }
+            if(category == "Category3")
+            {
+                Category3.Click();
+            }
+            else
+            {
+                Console.WriteLine("Incorrect category supplied");
+            }
         }
 
         public void Model()
         {
+            Thread.Sleep(1000);
             Model1.Click();
         }
 
