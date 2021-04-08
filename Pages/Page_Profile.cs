@@ -1,12 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using Westpac_Assessment.Base;
 using Westpac_Assessment.Helpers;
 
@@ -22,27 +17,16 @@ namespace Westpac_Assessment.Pages
         #region Initialize Web Elements 
 
         public IWebElement ProfileButton => Drivers.driver.FindElement(By.XPath("//a[contains(text(),'Profile')]"));
-
         public IWebElement UpdateFirstName => Drivers.driver.FindElement(By.XPath("//input[@id='firstName']"));
-
         public IWebElement UpdateLastName => Drivers.driver.FindElement(By.XPath("//input[@id='lastName']"));
-
         //public IWebElement Genderbox => Drivers.driver.FindElement(By.XPath(""));
-
         public IWebElement AgeBox => Drivers.driver.FindElement(By.XPath("//input[@id='age']"));
-
         public IWebElement AddressBox => Drivers.driver.FindElement(By.XPath("//textarea[@id='address']"));
-
         public IWebElement PhoneBox => Drivers.driver.FindElement(By.XPath("//input[@id='phone']"));
-
         public IWebElement Hobbybox => Drivers.driver.FindElement(By.XPath("//select[@id='hobby']"));
-
         public IWebElement CurrentPasswordbox => Drivers.driver.FindElement(By.XPath("//input[@id='currentPassword']"));
-
         public IWebElement NewPasswordbox => Drivers.driver.FindElement(By.XPath("//input[@id='newPassword']"));
-
         public IWebElement ConfirmPasswordbox => Drivers.driver.FindElement(By.XPath("//input[@id='newPasswordConfirmation']"));
-
         public IWebElement SaveButton => Drivers.driver.FindElement(By.XPath("//button[contains(text(),'Save')]"));
 
         #endregion

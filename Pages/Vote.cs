@@ -31,10 +31,8 @@ namespace Westpac_Assessment.Pages
         public IWebElement VoteButton => Drivers.driver.FindElement(By.XPath("//button[contains(text(),'Vote!')]"));
 
         #endregion
-
         public void Category(String category)
         {
-            
             if (category == "Category1")
             {
                 Category1.Click();

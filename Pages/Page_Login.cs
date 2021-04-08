@@ -1,10 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using Westpac_Assessment.Base;
 using Westpac_Assessment.Helpers;
 
@@ -62,6 +59,7 @@ namespace Westpac_Assessment.Pages
                     break;
 
                 case "invalid":
+                    Thread.Sleep(1000);
                     Assert.Equals(Drivers.driver.FindElement(By.XPath("//span[@class='label label-warning']")).Text, "Invalid username/password");
                     Console.WriteLine("Test Passed");
                     break;
