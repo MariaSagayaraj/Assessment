@@ -41,6 +41,7 @@ namespace Westpac_Assessment.Steps
         public void ThenIShouldBeSuccessfullyLoggedOutFromTheApplication()
         {
             LogOutAssertion();
+            Drivers.SaveScreenshot();
             Drivers.CloseBrowser();
         }
 

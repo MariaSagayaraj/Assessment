@@ -39,6 +39,7 @@ namespace Westpac_Assessment.Steps
         public void ThenTheProfileShouldBeSavedSuccessfully()
         {
             AssertUpdate();
+            Drivers.SaveScreenshot();
             Drivers.CloseBrowser();
         }
 
@@ -46,6 +47,7 @@ namespace Westpac_Assessment.Steps
         public void ThenThePasswordShouldBeChangedSuccessfully()
         {
             AssertUpdate();
+            Drivers.SaveScreenshot();
             Drivers.CloseBrowser();
         }
     }

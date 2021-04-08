@@ -39,6 +39,7 @@ namespace Westpac_Assessment.Steps
         public void ThenIShouldBeRegisteredSuccessfully()
         {
             RegAssertion();
+            Drivers.SaveScreenshot();
             Drivers.CloseBrowser();
         }
     }

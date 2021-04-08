@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading;
 using Westpac_Assessment.Base;
 using Westpac_Assessment.Helpers;
+using static Westpac_Assessment.Helpers.Drivers;
 
 namespace Westpac_Assessment.Pages
 {
@@ -79,6 +80,8 @@ namespace Westpac_Assessment.Pages
                     Console.WriteLine("Test Passed");
                     break;
             }
+
+           SaveScreenShotClass.SaveScreenshot(Drivers.driver, "Capture");
         }
 
         // Logout Assertion
@@ -86,9 +89,9 @@ namespace Westpac_Assessment.Pages
         {
             // Wait untill the login button
             WaitHelpers.WaitClickableElement(Drivers.driver, "XPath", "//button[@class='btn btn-success']");
-
             Assert.AreEqual(LoginButton.Displayed, true);
         }
+
     }
 }
 

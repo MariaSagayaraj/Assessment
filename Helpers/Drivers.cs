@@ -7,6 +7,7 @@ using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Westpac_Assessment.Base;
 
@@ -154,5 +155,11 @@ namespace Westpac_Assessment.Helpers
             }
         }
         #endregion
+
+        public static void SaveScreenshot()
+        {
+            Thread.Sleep(3000);
+            SaveScreenShotClass.SaveScreenshot(Drivers.driver, "Capture");
+        }
     }
 }

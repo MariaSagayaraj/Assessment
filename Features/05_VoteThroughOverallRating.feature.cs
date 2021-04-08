@@ -20,8 +20,8 @@ namespace Westpac_Assessment.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.7.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("05_Vote through Overall rating category")]
-    public partial class _05_VoteThroughOverallRatingCategoryFeature
+    [NUnit.Framework.DescriptionAttribute("05_Vote through Overall rating")]
+    public partial class _05_VoteThroughOverallRatingFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -35,7 +35,7 @@ namespace Westpac_Assessment.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "05_Vote through Overall rating category", "  As a Tester, I wanted to test the if the user is able to vote through overall r" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "05_Vote through Overall rating", "  As a Tester, I wanted to test the if the user is able to vote through overall r" +
                     "ating", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
