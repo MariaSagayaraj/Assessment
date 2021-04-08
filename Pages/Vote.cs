@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace Westpac_Assessment.Pages
 {
     public class Vote
     {
+        #region Initialize Web Elements 
         public IWebElement Category1 => Drivers.driver.FindElement(By.XPath("//img[@title='Lamborghini']"));
 
         public IWebElement Category2 => Drivers.driver.FindElement(By.XPath("//img[@title='Diablo']"));
@@ -20,9 +22,15 @@ namespace Westpac_Assessment.Pages
 
         public IWebElement Model1 => Drivers.driver.FindElement(By.XPath("//img[@title='Lamborghini Murciélago']"));
 
+        public IWebElement OverallModel1 => Drivers.driver.FindElement(By.XPath("//a[contains(text(),'Lancia')]"));
+
+        public IWebElement OverallModel2 => Drivers.driver.FindElement(By.XPath("//a[contains(text(),'Delta')]"));
+
         public IWebElement AddComment => Drivers.driver.FindElement(By.XPath("//*[contains(@id,'comment')]"));
 
         public IWebElement VoteButton => Drivers.driver.FindElement(By.XPath("//button[contains(text(),'Vote!')]"));
+
+        #endregion
 
         public void Category(String category)
         {
@@ -49,6 +57,17 @@ namespace Westpac_Assessment.Pages
         {
             Thread.Sleep(1000);
             Model1.Click();
+        }
+
+        public void OverallModel()
+        {
+            Thread.Sleep(1000);
+            Actions act = new Actions(Drivers.driver);
+            act.MoveToElement(Drivers.driver.FindElement(By.XPath("//a[contains(text(),'»')]"))).Click().Build().Perform();
+            Thread.Sleep(1000);
+            OverallModel1.Click();
+            Thread.Sleep(1000);
+            OverallModel2.Click();
         }
 
         public void AddCommentAndVote()

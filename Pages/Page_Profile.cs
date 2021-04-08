@@ -45,8 +45,7 @@ namespace Westpac_Assessment.Pages
 
         public IWebElement SaveButton => Drivers.driver.FindElement(By.XPath("//button[contains(text(),'Save')]"));
 
-        //public IWebElement SuccessMessage => Drivers.driver.PageSource.Contains("")
-        
+        #endregion
 
         public void selectGender()
         {
