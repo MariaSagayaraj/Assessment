@@ -55,23 +55,28 @@ namespace Westpac_Assessment.Pages
         // Overall rating method
         public void OverallModel()
         {
-            Thread.Sleep(1000);
+            // Wait untill the page is loaded
+            WaitHelpers.WaitClickableElement(Drivers.driver, "XPath", "//a[contains(text(),'»')]");
 
             // Actions method to move between pages
             Actions act = new Actions(Drivers.driver);
             act.MoveToElement(Drivers.driver.FindElement(By.XPath("//a[contains(text(),'»')]"))).Click().Build().Perform();
-            Thread.Sleep(1000);
+            WaitHelpers.TurnOnWait();
 
+            // Click overall model 
             OverallModel1.Click();
-            Thread.Sleep(1000);
+
+            // Wait and Click on the car to vote
+
+            WaitHelpers.WaitClickableElement(Drivers.driver, "XPath", "//a[contains(text(),'Delta')]");
             OverallModel2.Click();
         }
 
         // Add Comment and Click Vote
         public void AddCommentAndVote()
         {
-            Thread.Sleep(1000);
-            AddComment.SendKeys("marstest1");
+            WaitHelpers.WaitClickableElement(Drivers.driver, "XPath", "//*[contains(@id,'comment')]");
+           AddComment.SendKeys("marstest1");
             VoteButton.Click();
         }
 

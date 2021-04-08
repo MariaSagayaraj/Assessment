@@ -2,7 +2,7 @@
   As a Tester, I wanted to test the login functionality of  Buggy Cars Rating application
 
   @automation
-  Scenario Outline: Log into the application with different inputs
+  Scenario Outline: 1 Log into the application with different inputs
     Given I open browser and navigate to the url
     When I enter <data> login credentials and click login button
     Then I validate successfull login to the application as per the <data>
@@ -14,7 +14,7 @@
       | null |
 
     @automation
-   Scenario Outline: Logging out
+   Scenario Outline: 2 Logging out
     Given   I open browser and navigate to the url
     When   I enter <data> login credentials and click login button
     And       I click on Logout button

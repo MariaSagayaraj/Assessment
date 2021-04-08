@@ -26,7 +26,6 @@ namespace Westpac_Assessment.Pages
         public IWebElement LTextbox => Drivers.driver.FindElement(By.XPath("//input[@id='lastName']"));
         public IWebElement PwdTextBox => Drivers.driver.FindElement(By.XPath("//input[@id='password']"));
         public IWebElement ConfirmPwdTextbox => Drivers.driver.FindElement(By.XPath("//input[@id='confirmPassword']"));
-
         public IWebElement RegisterButton => Drivers.driver.FindElement(By.XPath("//button[contains(text(),'Register')]"));
         #endregion
 
@@ -53,7 +52,9 @@ namespace Westpac_Assessment.Pages
         // Regsitration Assertion method
         public void RegAssertion()
         {
-            Thread.Sleep(1000);
+            // Wait untill the successful message 
+            WaitHelpers.WaitClickableElement(Drivers.driver, "XPath", "//div[contains(text(),'Registration is successful')]");
+
             Assert.AreEqual(Drivers.driver.FindElement(By.XPath("//div[contains(text(),'Registration is successful')]")).Displayed, true);
         }
     }

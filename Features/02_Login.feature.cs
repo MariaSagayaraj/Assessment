@@ -75,12 +75,12 @@ namespace Westpac_Assessment.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Log into the application with different inputs")]
+        [NUnit.Framework.DescriptionAttribute("1 Log into the application with different inputs")]
         [NUnit.Framework.CategoryAttribute("automation")]
         [NUnit.Framework.TestCaseAttribute("valid", null)]
         [NUnit.Framework.TestCaseAttribute("invalid", null)]
         [NUnit.Framework.TestCaseAttribute("null", null)]
-        public virtual void LogIntoTheApplicationWithDifferentInputs(string data, string[] exampleTags)
+        public virtual void _1LogIntoTheApplicationWithDifferentInputs(string data, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "automation"};
@@ -91,7 +91,7 @@ namespace Westpac_Assessment.Features
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("data", data);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Log into the application with different inputs", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("1 Log into the application with different inputs", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 5
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -126,10 +126,10 @@ namespace Westpac_Assessment.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Logging out")]
+        [NUnit.Framework.DescriptionAttribute("2 Logging out")]
         [NUnit.Framework.CategoryAttribute("automation")]
         [NUnit.Framework.TestCaseAttribute("valid", null)]
-        public virtual void LoggingOut(string data, string[] exampleTags)
+        public virtual void _2LoggingOut(string data, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "automation"};
@@ -140,7 +140,7 @@ namespace Westpac_Assessment.Features
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("data", data);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Logging out", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2 Logging out", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 17
    this.ScenarioInitialize(scenarioInfo);
 #line hidden

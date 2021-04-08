@@ -49,8 +49,13 @@ namespace Westpac_Assessment.Pages
                     break;
             }
 
+            // Enter user name
             enterUname.SendKeys(username);
+
+            // Enter password
             enterPassword.SendKeys(password);
+
+            // Click login button
             LoginButton.Click();
         }
 
@@ -65,7 +70,7 @@ namespace Westpac_Assessment.Pages
                     break;
 
                 case "invalid":
-                    Thread.Sleep(1000);
+                    WaitHelpers.TurnOnWait();
                     Assert.AreEqual(Drivers.driver.FindElement(By.XPath("//span[contains(text(),'Invalid username/password')]")).Displayed, true);
                     Console.WriteLine("Test Passed");
                     break;
@@ -79,7 +84,9 @@ namespace Westpac_Assessment.Pages
         // Logout Assertion
         public void LogOutAssertion()
         {
-            Thread.Sleep(1000);
+            // Wait untill the login button
+            WaitHelpers.WaitClickableElement(Drivers.driver, "XPath", "//button[@class='btn btn-success']");
+
             Assert.AreEqual(LoginButton.Displayed, true);
         }
     }

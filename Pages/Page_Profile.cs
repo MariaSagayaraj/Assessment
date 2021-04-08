@@ -33,7 +33,7 @@ namespace Westpac_Assessment.Pages
         #endregion
 
         // Select Gender
-        public void selectGender()
+        public void SelectGender()
         {
             GenderTextbox.Clear();
             GenderTextbox.SendKeys(Drivers.ExcelLib.ReadData(2, "Gender"));
@@ -49,9 +49,9 @@ namespace Westpac_Assessment.Pages
         public void UpdateProfile()
         {
             //Click on Profile button
-            Thread.Sleep(2000);
+            WaitHelpers.TurnOnWait();
             ProfileButton.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(1000);
 
             //Update FirstName
             FirstNameTextbox.Clear();
@@ -62,7 +62,7 @@ namespace Westpac_Assessment.Pages
             LastNameTextBox.SendKeys(Drivers.ExcelLib.ReadData(2, "Update LastName"));
 
             //Select gender from dropdown
-            selectGender();
+            SelectGender();
 
             //Enter age into the age field
             AgeTextBox.Clear();
@@ -83,9 +83,13 @@ namespace Westpac_Assessment.Pages
         // Update Password
         public void ChangePassword()
         {
-            Thread.Sleep(1000);
+            // Wait untill the profile button is found
+            WaitHelpers.WaitClickableElement(Drivers.driver, "XPath", "//a[contains(text(),'Profile')]");
+
+            // Click Profile buttton
             ProfileButton.Click();
-            Thread.Sleep(1000);
+
+            WaitHelpers.TurnOnWait();
 
             // Entering current password
             CurrentPassword.SendKeys(Drivers.ExcelLib.ReadData(2, "Password"));
