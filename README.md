@@ -4,15 +4,6 @@
 The purpose of this project is to develop a test approach and document most critical bugs for the given resource
 ## Resource 
 https://buggy.justtestit.org 
-## Features
-
-:heavy_check_mark: Analyzing the above resource 
-
-:heavy_check_mark: Developing a test approach
-
-:heavy_check_mark: Creating an automated test solution to test the top 5 critical functionalities of BuggyCars
-
-:heavy_check_mark: Document Bug report on most critical bugs in the application
 
 ## Instruction
 ### Setup / Prerequisite 
