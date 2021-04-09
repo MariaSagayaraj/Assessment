@@ -32,7 +32,7 @@ Microsoft Excel - Data-Driven approach
 
 ### Test Approach:
 
-Please navigate to TestApproach folder in the project repository and open Test **Approach.docx** file
+Please navigate to TestApproach folder in the project repository and open **TestApproach.docx** file
 
 ## Automated Test Execution
 ### Checks before Execution:
