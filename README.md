@@ -35,6 +35,20 @@ Microsoft Excel - Data-Driven approach
 Please navigate to TestApproach folder in the project repository and open **TestApproach.docx** file
 
 ## Automated Test Execution
+
+### Functionalities covered:
+:heavy_check_mark: Registration 
+
+:heavy_check_mark: Login and Logout
+
+:heavy_check_mark: Update Profile
+
+:heavy_check_mark: Vote through Popular Make
+
+:heavy_check_mark: Vote through Popular Model
+
+:heavy_check_mark: Vote through Overall rating
+
 ### Checks before Execution:
 :heavy_check_mark: Download or clone the GitHub repository mentioned above 
  
