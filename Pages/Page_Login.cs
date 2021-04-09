@@ -17,16 +17,20 @@ namespace Westpac_Assessment.Pages
         // Excel Initialization
         public Page_Login()
         {
-            Drivers.ExcelLib.PopulateInCollection(BaseClass.ExcelPath, "Registration");
+            Drivers.ExcelLib.PopulateInCollection(BaseClass.ExcelPath, "TestData");
         }
 
         #region Initialize Web Elements 
-        public IWebElement EnterUname => Drivers.driver.FindElement(By.XPath("//input[@name='login']"));
+        // Login textbox
+        public IWebElement LoginTextbox => Drivers.driver.FindElement(By.XPath("//input[@name='login']"));
 
-        public IWebElement EnterPassword => Drivers.driver.FindElement(By.XPath("//input[@name='password']"));
+        // Password Textbox
+        public IWebElement PasswordTextbox => Drivers.driver.FindElement(By.XPath("//input[@name='password']"));
 
+        //Login button
         public IWebElement LoginButton => Drivers.driver.FindElement(By.XPath("//button[@class='btn btn-success']"));
 
+        // Logout button
         public IWebElement LogoutButton => Drivers.driver.FindElement(By.XPath("//a[contains(text(),'Logout')]"));
 
         #endregion
@@ -51,12 +55,15 @@ namespace Westpac_Assessment.Pages
             }
 
             // Enter user name
-            EnterUname.SendKeys(username);
+            Assert.AreEqual(LoginTextbox.Displayed, true);
+            LoginTextbox.SendKeys(username);
 
             // Enter password
-            EnterPassword.SendKeys(password);
+            Assert.AreEqual(PasswordTextbox.Displayed, true);
+            PasswordTextbox.SendKeys(password);
 
             // Click login button
+            Assert.AreEqual(LoginButton.Displayed, true);
             LoginButton.Click();
         }
 
@@ -77,7 +84,7 @@ namespace Westpac_Assessment.Pages
                     break;
 
                 case "null":
-                    Assert.AreEqual(EnterUname.Displayed, true);
+                    Assert.AreEqual(LoginTextbox.Displayed, true);
                     Console.WriteLine("Test Passed");
                     break;
             }
@@ -94,7 +101,6 @@ namespace Westpac_Assessment.Pages
         }
 
     }
-
     }
 
 

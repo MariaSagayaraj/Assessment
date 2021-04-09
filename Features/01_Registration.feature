@@ -1,6 +1,6 @@
 ﻿Feature: 01_Registration
 	As a User
-	I want to Register myself
+	I want to Register into the Buggy Cars rating web application
 
 @automation
 Scenario: Registration

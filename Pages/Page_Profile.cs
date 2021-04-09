@@ -12,7 +12,7 @@ namespace Westpac_Assessment.Pages
         // Excel Initialization
         public Page_Profile()
         {
-            Drivers.ExcelLib.PopulateInCollection(BaseClass.ExcelPath, "Registration");
+            Drivers.ExcelLib.PopulateInCollection(BaseClass.ExcelPath, "TestData");
         }
 
         #region Initialize Web Elements 
@@ -40,7 +40,7 @@ namespace Westpac_Assessment.Pages
         }
 
         // Select Hobby 
-        public void selectHobby()
+        public void SelectHobby()
         {
             new SelectElement(HobbyTextbox).SelectByText(Drivers.ExcelLib.ReadData(2, "Hobby"));
         }
@@ -77,7 +77,7 @@ namespace Westpac_Assessment.Pages
             PhonetextBox.SendKeys(Drivers.ExcelLib.ReadData(2, "Phone"));
 
             //Select hobby from the dropdown
-            selectHobby();
+            SelectHobby();
         }
 
         // Update Password

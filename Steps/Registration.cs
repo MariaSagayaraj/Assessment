@@ -1,6 +1,4 @@
-﻿using OpenQA.Selenium.Internal;
-using System;
-using TechTalk.SpecFlow;
+﻿using TechTalk.SpecFlow;
 using Westpac_Assessment.Base;
 using Westpac_Assessment.Helpers;
 using Westpac_Assessment.Pages;

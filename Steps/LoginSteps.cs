@@ -1,5 +1,4 @@
-﻿using System;
-using TechTalk.SpecFlow;
+﻿using TechTalk.SpecFlow;
 using Westpac_Assessment.Base;
 using Westpac_Assessment.Pages;
 using Westpac_Assessment.Helpers;
