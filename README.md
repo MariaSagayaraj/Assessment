@@ -42,7 +42,7 @@ Please navigate to TestApproach folder in the project repository and open **Test
  
 :heavy_check_mark: Check if you have installed the Visual Studio before opening the above solution file.
  
-### How to execute:
+### How to run:
  
 :heavy_check_mark: Open the solution file - Westpac_Assessment.sln from the downloded folder
  
