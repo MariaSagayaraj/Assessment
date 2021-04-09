@@ -30,6 +30,10 @@ Microsoft Excel - Data-Driven approach
 ### Source Control Repository 
 [GitHub]( https://github.com/MariaSagayaraj/Westpac_Assessment)
 
+### Test Approach:
+
+Please navigate to TestApproach folder in the project repository and open Test Approach.docx file
+
 ## Automated Test Execution
 ### Checks before Execution:
 :heavy_check_mark: Download or clone the GitHub repository mentioned above 
@@ -75,5 +79,11 @@ Microsoft Excel - Data-Driven approach
 
 Please navigate to BugReport folder in the project repository and open BugReport_BuggyCarsRating.xlsx file
 
+
+### Screenshots:
+
+:heavy_check_mark: Please navigate to Screenshots folder in the project repository 
+
+:heavy_check_mark: Open the jpeg files to view the application response during the test execution with respect to feature files added
 
 
