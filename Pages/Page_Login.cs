@@ -53,7 +53,7 @@ namespace Westpac_Assessment.Pages
                     password = Drivers.ExcelLib.ReadData(2, "Null Password");
                     break;
             }
-
+            String screenshotName = "Login"+"_"+data;
             // Enter user name
             Assert.AreEqual(LoginTextbox.Displayed, true);
             LoginTextbox.SendKeys(username);
@@ -65,6 +65,8 @@ namespace Westpac_Assessment.Pages
             // Click login button
             Assert.AreEqual(LoginButton.Displayed, true);
             LoginButton.Click();
+            WaitHelpers.TurnOnWait();
+            
         }
 
         // Login Assertion
@@ -84,12 +86,11 @@ namespace Westpac_Assessment.Pages
                     break;
 
                 case "null":
-                    Assert.AreEqual(LoginTextbox.Displayed, true);
+                   Assert.AreEqual(LoginTextbox.Displayed, true);
                     Console.WriteLine("Test Passed");
                     break;
             }
 
-           SaveScreenShotClass.SaveScreenshot(Drivers.driver, "Capture");
         }
 
         // Logout Assertion
@@ -99,7 +100,6 @@ namespace Westpac_Assessment.Pages
             WaitHelpers.WaitClickableElement(Drivers.driver, "XPath", "//button[@class='btn btn-success']");
             Assert.AreEqual(LoginButton.Displayed, true);
         }
-
     }
     }
 

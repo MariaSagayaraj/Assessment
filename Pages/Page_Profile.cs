@@ -51,9 +51,9 @@ namespace Westpac_Assessment.Pages
             //Click on Profile button
             WaitHelpers.TurnOnWait();
             ProfileButton.Click();
-            Thread.Sleep(1000);
 
             //Update FirstName
+            WaitHelpers.WaitClickableElement(Drivers.driver, "XPath", "//input[@id='firstName']");
             FirstNameTextbox.Clear();
             FirstNameTextbox.SendKeys(Drivers.ExcelLib.ReadData(2, "Update FirstName"));
 

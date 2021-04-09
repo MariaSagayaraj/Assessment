@@ -35,8 +35,7 @@ namespace Westpac_Assessment.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "04_Vote through Popular Model", "  As a Tester, I wanted to test the if the user is able to vote through Popular M" +
-                    "odel", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "04_Vote through Popular Model", "  As a user, I wanted to vote through Popular Model category", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -77,11 +76,18 @@ namespace Westpac_Assessment.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Vote through Popular Model")]
         [NUnit.Framework.CategoryAttribute("automation")]
-        public virtual void VoteThroughPopularModel()
+        [NUnit.Framework.TestCaseAttribute("Popular_Model", null)]
+        public virtual void VoteThroughPopularModel(string screenshotName, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
+            string[] @__tags = new string[] {
                     "automation"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("screenshotName", screenshotName);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Vote through Popular Model", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 5
   this.ScenarioInitialize(scenarioInfo);
@@ -113,7 +119,7 @@ namespace Westpac_Assessment.Features
     testRunner.When("I add a comment and vote", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 9
-    testRunner.Then("I should be able to see the successful vote message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then(string.Format("I should able to see the successful vote message {0}", screenshotName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

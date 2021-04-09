@@ -22,7 +22,7 @@ namespace Westpac_Assessment.Steps
         [Given(@"I click on the Overall rating category")]
         public void GivenIClickOnTheOverallRatingCategory()
         {
-            Thread.Sleep(1000);
+            WaitHelpers.TurnOnWait();
             Category3.Click();
         }
 
@@ -35,14 +35,14 @@ namespace Westpac_Assessment.Steps
         [When(@"I Add a comment and vote")]
         public void WhenIAddACommentAndVote()
         {
-         
             AddCommentAndVote();
         }
-        
-        [Then(@"I should be able to see the successful vote message added")]
-        public void ThenIShouldBeAbleToSeeTheSuccessfulVoteMessageAdded()
+
+        [Then(@"I should be able to see the successful vote message (.*)")]
+        public void ThenIShouldBeAbleToSeeTheSuccessfulVoteMessage(string name)
         {
             AssertVote();
+            Drivers.SaveScreenshot(name);
             Drivers.CloseBrowser();
         }
     }

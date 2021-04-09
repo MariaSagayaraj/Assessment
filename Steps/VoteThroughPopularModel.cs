@@ -30,11 +30,12 @@ namespace Westpac_Assessment.Steps
         {
             AddCommentAndVote();
         }
-        
-        [Then(@"I should be able to see the successful vote message")]
-        public void ThenIShouldBeAbleToSeeTheSuccessfulVoteMessage()
+
+        [Then(@"I should able to see the successful vote message (.*)")]
+        public void ThenIShouldAbleToSeeTheSuccessfulVoteMessage(string name)
         {
             AssertVote();
+            Drivers.SaveScreenshot(name);
             Drivers.CloseBrowser();
         }
     }

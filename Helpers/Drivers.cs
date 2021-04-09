@@ -156,10 +156,9 @@ namespace Westpac_Assessment.Helpers
         }
         #endregion
 
-        public static void SaveScreenshot()
+        public static void SaveScreenshot(String name)
         {
-            Thread.Sleep(3000);
-            SaveScreenShotClass.SaveScreenshot(Drivers.driver, "Capture");
+            SaveScreenShotClass.SaveScreenshot(Drivers.driver, name);
         }
     }
 }

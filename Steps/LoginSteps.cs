@@ -25,22 +25,23 @@ namespace Westpac_Assessment.Steps
         [When(@"I click on Logout button")]
         public void WhenIClickOnLogoutButton()
         {
-            Thread.Sleep(2000);
+            WaitHelpers.TurnOnWait();
             LogoutButton.Click();
         }
 
-        [Then(@"I validate successfull login to the application as per the (.*)")]
-        public void ThenIValidateSuccessfullLoginToTheApplicationAsPerThe(string data)
+        [Then(@"I validate successfull login to the application as per the (.*),(.*)")]
+        public void ThenIValidateSuccessfullLoginToTheApplicationAsPerThe(string data, string name)
         {
             Assertion(data);
-           Drivers. CloseBrowser();
+            Drivers.SaveScreenshot(name);
+            Drivers. CloseBrowser();
         }
 
-        [Then(@"I should be successfully logged out from the application")]
-        public void ThenIShouldBeSuccessfullyLoggedOutFromTheApplication()
+        [Then(@"I should be successfully logged out from the application (.*)")]
+        public void ThenIShouldBeSuccessfullyLoggedOutFromTheApplication(string name)
         {
             LogOutAssertion();
-            Drivers.SaveScreenshot();
+            Drivers.SaveScreenshot(name);
             Drivers.CloseBrowser();
         }
 

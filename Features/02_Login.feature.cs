@@ -35,8 +35,7 @@ namespace Westpac_Assessment.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "02_Login", "  As a Tester, I wanted to test the login functionality of  Buggy Cars Rating app" +
-                    "lication", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "02_Login", "  As a user, I wanted to login to the application", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -77,10 +76,10 @@ namespace Westpac_Assessment.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("1 Log into the application with different inputs")]
         [NUnit.Framework.CategoryAttribute("automation")]
-        [NUnit.Framework.TestCaseAttribute("valid", null)]
-        [NUnit.Framework.TestCaseAttribute("invalid", null)]
-        [NUnit.Framework.TestCaseAttribute("null", null)]
-        public virtual void _1LogIntoTheApplicationWithDifferentInputs(string data, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("valid", "Login_valid", null)]
+        [NUnit.Framework.TestCaseAttribute("invalid", "Login_invalid", null)]
+        [NUnit.Framework.TestCaseAttribute("null", "Login_null", null)]
+        public virtual void _1LogIntoTheApplicationWithDifferentInputs(string data, string screenshotName, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "automation"};
@@ -91,9 +90,10 @@ namespace Westpac_Assessment.Features
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("data", data);
+            argumentsOfScenario.Add("screenshotName", screenshotName);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("1 Log into the application with different inputs", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 5
-  this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -113,13 +113,13 @@ namespace Westpac_Assessment.Features
             {
                 this.ScenarioStart();
 #line 6
-    testRunner.Given("I open browser and navigate to the url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I open browser and navigate to the url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 7
-    testRunner.When(string.Format("I enter {0} login credentials and click login button", data), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I enter {0} login credentials and click login button", data), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 8
-    testRunner.Then(string.Format("I validate successfull login to the application as per the {0}", data), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("I validate successfull login to the application as per the {0}, {1}", data, screenshotName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -128,8 +128,8 @@ namespace Westpac_Assessment.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("2 Logging out")]
         [NUnit.Framework.CategoryAttribute("automation")]
-        [NUnit.Framework.TestCaseAttribute("valid", null)]
-        public virtual void _2LoggingOut(string data, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("valid", "Logout", null)]
+        public virtual void _2LoggingOut(string data, string screenshotName, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "automation"};
@@ -140,9 +140,10 @@ namespace Westpac_Assessment.Features
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("data", data);
+            argumentsOfScenario.Add("screenshotName", screenshotName);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2 Logging out", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 17
-   this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -162,16 +163,16 @@ namespace Westpac_Assessment.Features
             {
                 this.ScenarioStart();
 #line 18
-    testRunner.Given("I open browser and navigate to the url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I open browser and navigate to the url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 19
-    testRunner.When(string.Format("I enter {0} login credentials and click login button", data), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I enter {0} login credentials and click login button", data), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 20
-    testRunner.And("I click on Logout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click on Logout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 21
-    testRunner.Then("I should be successfully logged out from the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("I should be successfully logged out from the application {0}", screenshotName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

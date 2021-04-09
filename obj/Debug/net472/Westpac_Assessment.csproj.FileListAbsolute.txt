@@ -60,7 +60,6 @@ C:\Users\Maria.Sagayaraj\Desktop\Westpac_Assessment\bin\Debug\net472\LivingDoc.S
 C:\Users\Maria.Sagayaraj\Desktop\Westpac_Assessment\bin\Debug\net472\System.Threading.Tasks.Extensions.dll
 C:\Users\Maria.Sagayaraj\Desktop\Westpac_Assessment\bin\Debug\net472\System.ValueTuple.dll
 C:\Users\Maria.Sagayaraj\Desktop\Westpac_Assessment\bin\Debug\net472\Utf8Json.dll
-C:\Users\Maria.Sagayaraj\Desktop\Westpac_Assessment\obj\Debug\net472\Westpac_Assessment.csprojAssemblyReference.cache
 C:\Users\Maria.Sagayaraj\Desktop\Westpac_Assessment\obj\Debug\net472\Westpac_Assessment.dll.config
 C:\Users\Maria.Sagayaraj\Desktop\Westpac_Assessment\obj\Debug\net472\Westpac_Assessment.Config.BuggyResources.resources
 C:\Users\Maria.Sagayaraj\Desktop\Westpac_Assessment\obj\Debug\net472\Westpac_Assessment.csproj.GenerateResource.cache
@@ -71,3 +70,4 @@ C:\Users\Maria.Sagayaraj\Desktop\Westpac_Assessment\obj\Debug\net472\Westpac_Ass
 C:\Users\Maria.Sagayaraj\Desktop\Westpac_Assessment\obj\Debug\net472\Westpac_Assessment.dll
 C:\Users\Maria.Sagayaraj\Desktop\Westpac_Assessment\obj\Debug\net472\Westpac_Assessment.pdb
 C:\Users\Maria.Sagayaraj\Desktop\Westpac_Assessment\bin\Debug\net472\WebDriver.Support.dll
+C:\Users\Maria.Sagayaraj\Desktop\Westpac_Assessment\obj\Debug\net472\Westpac_Assessment.csprojAssemblyReference.cache

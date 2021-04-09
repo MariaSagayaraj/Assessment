@@ -22,14 +22,14 @@ namespace Westpac_Assessment.Steps
         [Given(@"I click on the Popular Make category")]
         public void GivenIClickOnThePopularMakeCategory()
         {
-            Thread.Sleep(1000);
+            WaitHelpers.TurnOnWait();
             Category1.Click();
         }
         
         [Given(@"I click on the desired car model")]
         public void GivenIClickOnTheDesiredCarModel()
         {
-            Thread.Sleep(1000);
+            WaitHelpers.TurnOnWait();
             Model1.Click();
         }
         
@@ -38,11 +38,12 @@ namespace Westpac_Assessment.Steps
         {
             AddCommentAndVote();
         }
-        
-        [Then(@"I should be able to see the vote has been added")]
-        public void ThenIShouldBeAbleToSeeTheVoteHasBeenAdded()
+
+        [Then(@"I should be able to see the vote has been added (.*)")]
+        public void ThenIShouldBeAbleToSeeTheVoteHasBeenAdded(string name)
         {
             AssertVote();
+            Drivers.SaveScreenshot(name);
             Drivers.CloseBrowser();
         }
     }

@@ -76,11 +76,18 @@ namespace Westpac_Assessment.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Registration")]
         [NUnit.Framework.CategoryAttribute("automation")]
-        public virtual void Registration()
+        [NUnit.Framework.TestCaseAttribute("Registration", null)]
+        public virtual void Registration(string screenshotName, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
+            string[] @__tags = new string[] {
                     "automation"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("ScreenshotName", screenshotName);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Registration", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 6
 this.ScenarioInitialize(scenarioInfo);
@@ -115,7 +122,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I click on Register button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 11
- testRunner.Then("I should be registered successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("I should be registered successfully {0}", screenshotName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

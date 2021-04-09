@@ -85,11 +85,18 @@ namespace Westpac_Assessment.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("01_Update my information")]
         [NUnit.Framework.CategoryAttribute("automate")]
-        public virtual void _01_UpdateMyInformation()
+        [NUnit.Framework.TestCaseAttribute("Update_Profile", null)]
+        public virtual void _01_UpdateMyInformation(string screenshotName, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
+            string[] @__tags = new string[] {
                     "automate"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("screenshotName", screenshotName);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01_Update my information", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 8
 this.ScenarioInitialize(scenarioInfo);
@@ -121,7 +128,7 @@ this.ScenarioInitialize(scenarioInfo);
     testRunner.When("I click on Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 11
-    testRunner.Then("The profile should be saved successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then(string.Format("The profile should be saved successfully {0}", screenshotName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -130,13 +137,20 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("02_Change Password")]
         [NUnit.Framework.CategoryAttribute("automate")]
-        public virtual void _02_ChangePassword()
+        [NUnit.Framework.TestCaseAttribute("Change_Password", null)]
+        public virtual void _02_ChangePassword(string screenshotName, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
+            string[] @__tags = new string[] {
                     "automate"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("screenshotName", screenshotName);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02_Change Password", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 14
+#line 18
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -159,14 +173,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
     this.FeatureBackground();
 #line hidden
-#line 15
+#line 19
     testRunner.And("I enter data to the password fields", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 16
+#line 20
     testRunner.When("I click on Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 17
-    testRunner.Then("The password should be changed successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 21
+    testRunner.Then(string.Format("The password should be changed successfully {0}", screenshotName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -34,20 +34,20 @@ namespace Westpac_Assessment.Steps
         {
             SaveButton.Click();
         }
-        
-        [Then(@"The profile should be saved successfully")]
-        public void ThenTheProfileShouldBeSavedSuccessfully()
+
+        [Then(@"The profile should be saved successfully (.*)")]
+        public void ThenTheProfileShouldBeSavedSuccessfully(string name)
         {
             AssertUpdate();
-            Drivers.SaveScreenshot();
+            Drivers.SaveScreenshot(name);
             Drivers.CloseBrowser();
         }
 
-        [Then(@"The password should be changed successfully")]
-        public void ThenThePasswordShouldBeChangedSuccessfully()
+        [Then(@"The password should be changed successfully (.*)")]
+        public void ThenThePasswordShouldBeChangedSuccessfully(string name)
         {
             AssertUpdate();
-            Drivers.SaveScreenshot();
+            Drivers.SaveScreenshot(name);
             Drivers.CloseBrowser();
         }
     }

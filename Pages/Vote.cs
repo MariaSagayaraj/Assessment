@@ -62,7 +62,7 @@ namespace Westpac_Assessment.Pages
             // Check if  AddComment text box is present and then enter comment
             Assert.AreEqual(AddComment.Displayed, true);
 
-            AddComment.SendKeys("marstest1");
+            AddComment.SendKeys(Drivers.ExcelLib.ReadData(2, "Comment"));
             VoteButton.Click();
         }
 

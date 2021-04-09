@@ -1,5 +1,5 @@
 ﻿Feature: 03_Vote through Popular Make
-  As a Tester, I wanted to test the if the user is able to vote through Popular Make
+  As a user, I wanted to vote through Popular Make category
 
   @automation
   Scenario: Vote through Popular Make
@@ -7,4 +7,8 @@
     And   I click on the Popular Make category 
     And   I click on the desired car model
     When  I add comment and vote
-    Then  I should be able to see the vote has been added
+    Then  I should be able to see the vote has been added <screenshotName>
+
+    Examples:
+    | screenshotName |
+    | Popular_Make     |

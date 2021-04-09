@@ -32,13 +32,14 @@ namespace Westpac_Assessment.Steps
         {
             RegisterButton.Click();
         }
-        
-        [Then(@"I should be registered successfully")]
-        public void ThenIShouldBeRegisteredSuccessfully()
+
+        [Then(@"I should be registered successfully (.*)")]
+        public void ThenIShouldBeRegisteredSuccessfully(string name)
         {
             RegAssertion();
-            Drivers.SaveScreenshot();
+            Drivers.SaveScreenshot(name);
             Drivers.CloseBrowser();
         }
+
     }
 }
