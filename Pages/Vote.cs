@@ -50,7 +50,6 @@ namespace Westpac_Assessment.Pages
             OverallModel1.Click();
 
             // Wait and Click on the car to vote
-
             WaitHelpers.WaitClickableElement(Drivers.driver, "XPath", "//a[contains(text(),'Delta')]");
             OverallModel2.Click();
         }
