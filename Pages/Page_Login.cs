@@ -21,9 +21,9 @@ namespace Westpac_Assessment.Pages
         }
 
         #region Initialize Web Elements 
-        public IWebElement enterUname => Drivers.driver.FindElement(By.XPath("//input[@name='login']"));
+        public IWebElement EnterUname => Drivers.driver.FindElement(By.XPath("//input[@name='login']"));
 
-        public IWebElement enterPassword => Drivers.driver.FindElement(By.XPath("//input[@name='password']"));
+        public IWebElement EnterPassword => Drivers.driver.FindElement(By.XPath("//input[@name='password']"));
 
         public IWebElement LoginButton => Drivers.driver.FindElement(By.XPath("//button[@class='btn btn-success']"));
 
@@ -51,10 +51,10 @@ namespace Westpac_Assessment.Pages
             }
 
             // Enter user name
-            enterUname.SendKeys(username);
+            EnterUname.SendKeys(username);
 
             // Enter password
-            enterPassword.SendKeys(password);
+            EnterPassword.SendKeys(password);
 
             // Click login button
             LoginButton.Click();
@@ -77,6 +77,7 @@ namespace Westpac_Assessment.Pages
                     break;
 
                 case "null":
+                    Assert.AreEqual(EnterUname.Displayed, true);
                     Console.WriteLine("Test Passed");
                     break;
             }
@@ -93,6 +94,8 @@ namespace Westpac_Assessment.Pages
         }
 
     }
-}
+
+    }
+
 
             
