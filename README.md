@@ -1,7 +1,7 @@
 # Westpac Practical Assessment
  
 ## Project Description 
-The purpose of this project is to develop a test approach and document most critical bugs
+The purpose of this project is to develop a test approach and document most critical bugs for the given resource
 ## Resource 
 https://buggy.justtestit.org 
 ## Features
