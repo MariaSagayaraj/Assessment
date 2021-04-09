@@ -1,7 +1,7 @@
 # Westpac Practical Assessment
  
-## Project Description 
-The purpose of this project is to develop a test approach and document most critical bugs
+## Overview 
+The purpose of this project is to develop a test approach and document most critical bugs for the given resource
 ## Resource 
 https://buggy.justtestit.org 
 ## Features
@@ -32,9 +32,23 @@ Microsoft Excel - Data-Driven approach
 
 ### Test Approach:
 
-Please navigate to TestApproach folder in the project repository and open Test Approach.docx file
+Please navigate to TestApproach folder in the project repository and open **TestApproach.docx** file
 
 ## Automated Test Execution
+
+### Functionalities covered:
+:heavy_check_mark: Registration 
+
+:heavy_check_mark: Login and Logout
+
+:heavy_check_mark: Update Profile
+
+:heavy_check_mark: Vote through Popular Make
+
+:heavy_check_mark: Vote through Popular Model
+
+:heavy_check_mark: Vote through Overall rating
+
 ### Checks before Execution:
 :heavy_check_mark: Download or clone the GitHub repository mentioned above 
  
@@ -42,7 +56,7 @@ Please navigate to TestApproach folder in the project repository and open Test A
  
 :heavy_check_mark: Check if you have installed the Visual Studio before opening the above solution file.
  
-### How to execute:
+### How to run:
  
 :heavy_check_mark: Open the solution file - Westpac_Assessment.sln from the downloded folder
  
@@ -77,7 +91,7 @@ Please navigate to TestApproach folder in the project repository and open Test A
 
 ### Bug Report:
 
-Please navigate to BugReport folder in the project repository and open BugReport_BuggyCarsRating.xlsx file
+Please navigate to BugReport folder in the project repository and open **BugReport_BuggyCarsRating.xlsx** file
 
 
 ### Screenshots:
