@@ -32,7 +32,7 @@ Microsoft Excel - Data-Driven approach
 
 ### Test Approach:
 
-Please navigate to TestApproach folder in the project repository and open Test Approach.docx file
+Please navigate to TestApproach folder in the project repository and open Test **Approach.docx** file
 
 ## Automated Test Execution
 ### Checks before Execution:
@@ -77,7 +77,7 @@ Please navigate to TestApproach folder in the project repository and open Test A
 
 ### Bug Report:
 
-Please navigate to BugReport folder in the project repository and open BugReport_BuggyCarsRating.xlsx file
+Please navigate to BugReport folder in the project repository and open **BugReport_BuggyCarsRating.xlsx** file
 
 
 ### Screenshots:
