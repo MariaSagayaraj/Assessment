@@ -1,4 +1,4 @@
-# Westpac Practical Assessment
+# Buggy Cars
  
 ## Overview 
 The purpose of this project is to develop a test approach and document most critical bugs for the given resource
